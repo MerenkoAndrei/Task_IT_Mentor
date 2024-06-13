@@ -23,9 +23,8 @@ public class Main {
             throw new Exception("Числа должны быть в одном формате");
         }
 
-        if (numberOne > 10 || numberTwo > 10) {
-            throw new Exception("Числа должны быть от 1 до 10");
-        }
+        if (numberOne > 10 || numberOne < 1) throw new Exception("Числа должны быть от 1 до 10");
+        if (numberTwo > 10 || numberTwo < 1) throw new Exception("Числа должны быть от 1 до 10");
 
         int raschet = calcR(numberOne, numberTwo, arithmeticExpression);
         result = String.valueOf(raschet);
